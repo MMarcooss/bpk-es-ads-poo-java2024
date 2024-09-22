@@ -1,5 +1,19 @@
-import java.sql.SQLOutput;
+    import java.sql.SQLOutput;
 
+<<<<<<< HEAD
+
+    public class Main {
+        public static void main(String[] args) {
+            Carro bmwAzul = new Carro("i4", "BMW", 2020, "Azul",300,50000.00,250);
+            System.out.println(bmwAzul);
+
+            Carro astraVermelho = new Carro("J4","Chevrolet",2012,"Vermelho",300,20000,300);
+            System.out.println(astraVermelho);
+
+
+        }
+    }
+=======
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -38,3 +52,4 @@ public class Main {
 
     }
 }
+>>>>>>> 17b181c933cd0ffded5f491f0ea530e306cf7424
