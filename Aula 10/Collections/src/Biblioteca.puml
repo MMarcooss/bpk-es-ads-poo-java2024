@@ -1,0 +1,50 @@
+@startuml
+abstract class ItemBiblioteca {
+    - titulo: String
+    - codigo: String
+}
+
+class Livro {
+    + reservar(): void
+    + cancelarReserva(): void
+}
+
+class Revista {
+}
+
+class DVD {
+    + reservar(): void
+    + cancelarReserva(): void
+}
+
+class Autor {
+}
+
+class Usuario {
+    - nome: String
+    - matricula: String
+}
+
+class Emprestimo {
+    + realizarEmprestimo(): void
+    + devolverItem(): void
+}
+
+interface Reservavel {
+    + reservar(): void
+    + cancelarReserva(): void
+}
+
+' Associações
+Autor *-- Livro : escreve
+Usuario *-- Emprestimo : realiza
+Emprestimo *-- ItemBiblioteca : associa
+
+Livro ..|> ItemBiblioteca
+Revista ..|> ItemBiblioteca
+DVD ..|> ItemBiblioteca
+
+Livro ..|> Reservavel
+DVD ..|> Reservavel
+
+@enduml

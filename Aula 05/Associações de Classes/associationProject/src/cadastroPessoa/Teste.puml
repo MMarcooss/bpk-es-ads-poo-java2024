@@ -21,12 +21,12 @@ class TransacaoService {
 
 Conta "1" *-- "1..*" TransacaoService : usa
 
-class Main {
+class Veiculos.Main {
     +void main(String[] args)
 }
 
-Main --> Conta : cria
-Main --> TransacaoService : usa
+Veiculos.Main --> Conta : cria
+Veiculos.Main --> TransacaoService : usa
 
 
 

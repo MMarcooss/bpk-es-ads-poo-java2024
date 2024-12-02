@@ -1,0 +1,45 @@
+@startuml
+class Produto {
+    - nome: String
+    - preco: double
+    - estoque: int
+}
+
+class CarrinhoDeCompras {
+    + adicionarProduto(p: Produto): void
+    + removerProduto(p: Produto): void
+    + calcularTotal(): double
+}
+
+class Cliente {
+    - nome: String
+    - email: String
+    - telefone: String
+}
+
+class Pedido {
+    + criarPedido(): void
+    + finalizarPedido(): void
+}
+
+interface Pagavel {
+    + processarPagamento(): void
+}
+
+class PagamentoCartao {
+    + processarPagamento(): void
+}
+
+class PagamentoBoleto {
+    + processarPagamento(): void
+}
+
+' Associações
+CarrinhoDeCompras o-- Produto : contém
+Pedido *-- Cliente : está associado a
+Pedido *-- CarrinhoDeCompras : contém
+Pedido --> Pagavel : usa
+PagamentoCartao ..|> Pagavel
+PagamentoBoleto ..|> Pagavel
+
+@enduml

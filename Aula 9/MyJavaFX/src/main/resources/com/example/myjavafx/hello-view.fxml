@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myjavafx.Controller">
+  <TextField fx:id="nomeField" promptText="Nome do Produto" layoutX="14.0" layoutY="14.0"/>
+  <TextField fx:id="pesoField" promptText="Peso do Produto" layoutX="14.0" layoutY="50.0"/>
+  <TextField fx:id="valorField" promptText="Valor do Produto" layoutX="14.0" layoutY="86.0"/>
+  <Button text="Adicionar Produto" layoutX="14.0" layoutY="122.0" onAction="#adicionarProduto"/>
+  <TextArea fx:id="resultadoArea" layoutX="14.0" layoutY="158.0" prefHeight="200.0" prefWidth="300.0"/>
+  <Button text="Otimizar Estoque" layoutX="140.0" layoutY="122.0" onAction="#otimizarEstoque"/>
+</AnchorPane>
